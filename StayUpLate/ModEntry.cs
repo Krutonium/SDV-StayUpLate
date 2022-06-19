@@ -45,7 +45,7 @@ namespace StayUpLate
             }
             //this.Monitor.Log(Game1.timeOfDay.ToString());
             //2550 is 1:50 AM
-            if (Game1.timeOfDay == config.TimeToStopAt)
+            if (Game1.timeOfDay == config.TimeToStopAt && Game1.player.Stamina > 1)
             {
                 ChangeTime(-10);
                 Game1.player.Stamina -= config.StaminaDrain;
